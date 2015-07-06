@@ -29,6 +29,46 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<!-- google api-->
+	<!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
 
 </head>
 
@@ -63,10 +103,10 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-				 <li class="active">
+				 <li>
                         <a href="profile.html"><i class="fa fa-fw fa-user"></i> Perfil</a>
                     </li>
-				<li>
+				<li class="active">
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-users"></i> Direção <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                            <li>
@@ -87,121 +127,36 @@
             </div>
             <!-- /.navbar-collapse -->
         </nav>
+		
+		
 
         <div id="page-wrapper">
 
             <div class="container-fluid">
 
-                <!-- Page Heading -->
+				<!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Perfil <small>Informações do Utilizador</small>
+                            Estatísticas <small>Dados sobre a utilização do website</small>
                         </h1> 
                     </div>
                 </div>
                 <!-- /.row -->
+                <!--Div that will hold the pie chart-->
 
 				<div class="row">
-                <div class="col-sm-3 wow fadeInLeft">
-                    <img class="img-responsive" src="images/bruno.jpg" alt="" style="margin-top: 25%; height: 200px ">
+                    <div class="col-lg-4">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Gráfico 1</h3>
+                            </div>
+                            <div class="panel-body">
+                                    <div id="chart_div"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3"><h3 id="subtitleVerde">Informação Básica:</h3>
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_verde">
-                            <i class="fa" ></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Nome:</h4>
-                            <p>John</p>
-                        </div>
-                    </div>
-
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_verde">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Apelido:</h4>
-                            <p>Doe</p>
-                        </div>
-                    </div>
-
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_verde">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">E-mail:</h4>
-                            <p>john.doe@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_verde">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Contacto:</h4>
-                            <p>+351 911 222 333</p>
-                        </div>
-                    </div>
-				</div>
-				
-				<div class="col-sm-3"><h3 id="subtitleVermelho">Projetos:</h3>
-					<div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_vermelho">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Trabalhos efetuados:</h4>
-                            <p>website da empresa XPTO</p>
-                        </div>
-                    </div>
-					
-					<div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_vermelho">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Trabalhos a desenvolver:</h4>
-                            <p>website da empresa asdf</p>
-                        </div>
-                    </div>
-					
-					<div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_vermelho">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Deadlines de trabalhos próximos:</h4>
-                            <p>07-07-2015</p>
-                        </div>
-                    </div>
-				</div>
-				
-				<div class="col-sm-3"><h3 id= "subtitleLaranja">Emprego:</h3>
-					<div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_laranja">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Cargo:</h4>
-                            <p>Programador</p>
-                        </div>
-                    </div>
-					
-					<div class="media service-box wow fadeInRight">
-                        <div class="pull-left" id="bola_laranja">
-                            <i class="fa"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" id = "subsubtitle">Páginas de trabalho:</h4>
-                            <p>asana.com - asana.com/....</p>
-                        </div>
-                    </div>
-				</div>
-            </div>
 
 				
 				
