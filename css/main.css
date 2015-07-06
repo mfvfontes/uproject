@@ -10,7 +10,7 @@ Author URL: http://shapebootstrap.net
 **************************/
 body {
 padding-top: 100px;
-background-image: url("../images/back.png");
+background: #FFF none repeat scroll 0% 0%;
 background-repeat: repeat;
   /*font-family: 'Roboto', sans-serif;*/
   font-family: "Diavlo";
@@ -66,6 +66,7 @@ hr {
   position: relative;
   padding-bottom: 20px;
   margin: 0 0 20px;
+  background: rga(46,46,46,0.9);
 
 }
 .section-header .section-title:before {
@@ -178,9 +179,10 @@ ul.nostyle i {
 /*************************
 *******Header******
 **************************/
-.navbar.navbar-default {
+.navbar.navbar-default.navbar-fixed-top {
   border-radius: 0;
   margin-bottom: 0;
+
 }
 .navbar.navbar-default .navbar-toggle {
   margin-top: 32px;
@@ -188,6 +190,7 @@ ul.nostyle i {
 .navbar.navbar-default .navbar-brand {
   height: auto;
   padding: 22px 15px 21px;
+
 }
 
 #loginbutton{
@@ -533,7 +536,7 @@ ul.nostyle i {
   padding: 100px 0;
 }
 #features .media.service-box:first-child {
-  margin-top: 80px;
+
 }
 #services {
   padding: 100px 0 75px;
@@ -571,7 +574,7 @@ ul.nostyle i {
 }
 
 .media.service-box {
-  margin: 25px 0;
+
 }
 .media.service-box .pull-left {
   margin-right: 20px;
@@ -1194,3 +1197,4 @@ ul.nostyle i {
 #orange_border,#green_border,#yellow_border,#red_border {
 	font-family: diavlo;
 }
+

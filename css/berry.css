@@ -64,27 +64,7 @@ header .navbar-default ul.navbar-nav li a {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-header .navbar-default ul.navbar-nav li a:after {
-  content: '';
-  width: 32px;
-  background: none;
-  height: 4px;
-  position: absolute;
-  bottom: 2px;
-  z-index: 99999;
-  left: 20px;
-  -webkit-border-radius: 5em;
-  -moz-border-radius: 5em;
-  -ms-border-radius: 5em;
-  -o-border-radius: 5em;
-  border-radius: 5em;
 
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -ms-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
 header .navbar-default ul.navbar-nav li a:hover {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;

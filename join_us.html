@@ -61,24 +61,24 @@
 				<p class="text-center wow fadeInDown">A nossa equipa está sempre à procura de novas ideias para revolucionar o mundo</p>
 				<p class="text-center wow fadeInDown">Se achas que tens o que é preciso para entrar nesta missão, inscreve-te abaixo</p>
 			</div>
-			<form>
+			<form id="main-join_us-form" name="join_us-form" method="post" action="#">
 				<div id = "row">
 					<div class="col-sm-6">
 						<div class="form-group wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
 							<label for="exampleInputEmail1">Nome</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px">
+							<input type="text" name="name" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px" required>
 							<label for="exampleInputEmail1">Instituição</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px">
+							<input type="text" name="institution" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px" required>
 							<label for="exampleInputEmail1" style="max-width: 400px;min-width=200px;display:block">Texto</label>
-							<textarea class = "form-control" type="text" cols="20" rows="5" style="max-width: 400px;min-width=200px; display:block"></textarea>				
+							<textarea class = "form-control" name="text" type="text" cols="20" rows="5" style="max-width: 400px;min-width=200px; display:block" placeholder="texto" required></textarea>				
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="form-group wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
 							<label for="exampleInputEmail1" style="max-width: 400px;min-width=200px">Carta de Motivação</label><br>
-							<span class="file-input btn btn-primary btn-file"><input type="file" name="carta" size="chars" accept="application/pdf">Escolher Carta de Motivação...</span>
+							<span class="file-input btn btn-primary btn-file"><input type="file" name="letter" size="chars" accept="application/pdf" placeholder="carta" required>Escolher Carta de Motivação...</span>
 							<label for="exampleInputEmail1" style="max-width: 400px;min-width=200px">Curriculum Vitae</label><br>
-							<span class="file-input btn btn-primary btn-file"><input type="file" name="curriculo" size="chars" accept="application/pdf">Escolher Ficheiro...</span>
+							<span class="file-input btn btn-primary btn-file"><input type="file" name="curriculum" size="chars" accept="application/pdf" placeholder="curriculo" required>Escolher Ficheiro...</span>
 							<div class = "after_uploads">
 								<button type="submit" class="btn btn-primary">Enviar</button>
 							</div>
@@ -87,37 +87,42 @@
 				</div>
 			</form>
 	</section>
-	<footer id="header">
-        <nav id="main-menu" class="navbar navbar-default navbar" role="banner">
-            <div class="container">
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li style = "padding-top: 0px"><a href="#competitions" id = "green_border_bottom"></a></li>
-                        <li class=""><a href="#partners" id  = "red_border_bottom"></a></li>
-						<li class=""><a href="#join" id = "orange_border_bottom"></a></li>
-                    </ul>
-					<ul id = "footer_menu">
-						<li id = "footer_menu_li"><a href = "about_us.html" class = "nolink">Organização</a></li>
-						<li id = "footer_menu_li"><a href = "competitions.html" class = "nolink">Competições</a></li>
-						<li id = "footer_menu_li"><a href = "join_us.html" class = "nolink">Junta-te a nós</a></li>
-						<li id = "footer_menu_li"><a href = "contatos.html" class = "nolink">Contatos</a></li>
-						<li id = "footer_menu_li"><a href = "faq.html" class = "nolink">FAQ´s</a></li>
-					</ul>
-                </div>
-				<div class="collapse navbar-collapse navbar-left">
-					<div id = "row">
-						<div class="col-sm-2">
-							<img src = "images/feup.png" class = "img_bottom">
-						</div>
-						<div class="col-sm-2 col-sm-offset-8">
-							<img src = "images/colgaia.png" class = "img_bottom">
-						</div>
-					</div>
-					
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    </footer><!--/footer-->
+			<footer id="header">
+		        <nav id="main-menu" class="navbar navbar-default navbar-fixed-bottom" role="banner">
+		            <div class="container">
+		                <div class="collapse navbar-collapse navbar-right">
+		                    <ul class="nav navbar-nav">
+		                        <li style = "padding-top: 0px"><a href="#competitions" id = "green_border_bottom"></a></li>
+		                        <li class=""><a href="#partners" id  = "red_border_bottom"></a></li>
+								<li class=""><a href="#join" id = "orange_border_bottom"></a></li>
+		                    </ul>
+							<ul id = "footer_menu">
+								<li id = "footer_menu_li"><a href = "about_us.html" class = "nolink">Organização</a></li>
+								<li id = "footer_menu_li"><a href = "competitions.html" class = "nolink">Competições</a></li>
+								<li id = "footer_menu_li"><a href = "join_us.html" class = "nolink">Junta-te a nós</a></li>
+								<li id = "footer_menu_li"><a href = "parcerias.html" class = "nolink">Parcerias</a></li>
+								<li id = "footer_menu_li"><a href = "faq.html" class = "nolink">FAQ´s</a></li>
+							</ul>
+		                </div>
+						<div class="collapse navbar-collapse navbar-left">
+							<div id = "row">
+								<div class="col-sm-1" style="padding-top: 15px">
+								<a href="https://www.facebook.com/"><img height="25" id=social-icon" src="images/facebook.png"></a>
+								<a href="https://plus.google.com/"><img height="25" id=social-icon" src="images/googleplus.png"></a>
+								<a href="https://www.twitter.com/"><img height="25" id=social-icon" src="images/twitter.png"></a>
+								</div>
+								<div class="col-sm-2 col-sm-offset-2">
+									<img src = "images/feup.png" class = "img_bottom">
+								</div>
+								<div class="col-sm-2 col-sm-offset-5">
+									<img src = "images/colgaia.png" class = "img_bottom">
+								</div>
+							</div>
+
+		                </div>
+		            </div><!--/.container-->
+		        </nav><!--/nav-->
+		    </footer><!--/footer-->
 	
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
