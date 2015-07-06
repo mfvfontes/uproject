@@ -25,6 +25,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	<link href="css/style2.css" rel="stylesheet">
+		<script src="js/validate.js"></script>
 </head><!--/head-->
 
 <body id="home" class="homepage">
@@ -71,24 +72,24 @@
 				<p class="text-center wow fadeInDown">A nossa equipa está sempre à procura de novas ideias para revolucionar o mundo</p>
 				<p class="text-center wow fadeInDown">Se achas que tens o que é preciso para entrar nesta missão, inscreve-te abaixo</p>
 			</div>
-			<form id="main-join_us-form" name="join_us-form" method="post" action="#" onsubmit="return validateForm();">
+			<form id="main-join_us-form" name="join_us-form" method="post" action="message.php" onsubmit="return validateForm_about_us();">
 				<div id = "row">
 					<div class="col-sm-6">
 						<div class="form-group wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
 							<label for="exampleInputEmail1">Nome</label>
-							<input type="text" name="name" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px">
+							<input type="text" id="name" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px" required>
 							<label for="exampleInputEmail1">Instituição</label>
-							<input type="text" name="institution" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px" required>
+							<input type="text" id="institution" class="form-control" id="exampleInputEmail1" style="max-width: 400px;min-width=200px" required>
 							<label for="exampleInputEmail1" style="max-width: 400px;min-width=200px;display:block">Texto</label>
-							<textarea class = "form-control" name="text" type="text" cols="20" rows="5" style="max-width: 400px;min-width=200px; display:block" placeholder="texto" required></textarea>				
+							<textarea class = "form-control" id="text" type="text" cols="20" rows="5" style="max-width: 400px;min-width=200px; display:block" placeholder="texto" required></textarea>				
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="form-group wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
 							<label for="exampleInputEmail1" style="max-width: 400px;min-width=200px">Carta de Motivação</label><br>
-							<span class="file-input btn btn-primary btn-file"><input type="file" name="letter" size="chars" accept="application/pdf" placeholder="carta">Escolher Carta de Motivação...</span>
+							<span class="file-input btn btn-primary btn-file"><input type="file" id="letter" size="chars" accept="application/pdf" placeholder="carta" required>Escolher Carta de Motivação...</span>
 							<label for="exampleInputEmail1" style="max-width: 400px;min-width=200px">Curriculum Vitae</label><br>
-							<span class="file-input btn btn-primary btn-file"><input type="file" name="curriculum" size="chars" accept="application/pdf" placeholder="curriculo">Escolher Ficheiro...</span>
+							<span class="file-input btn btn-primary btn-file"><input type="file" id="curriculum" size="chars" accept="application/pdf" placeholder="curriculo" required>Escolher Ficheiro...</span>
 							<div class = "after_uploads">
 								<button type="submit" class="btn btn-primary">Enviar</button>
 							</div>
@@ -146,6 +147,6 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
 	<script src="js/custom.js"></script>
-	<script src="js/validate.js"></script>
+
 </body>
 </html>

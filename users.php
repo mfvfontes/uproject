@@ -29,6 +29,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script src="js/validate.js"></script>
 
 </head>
 
@@ -104,27 +105,27 @@
 
 				<div class="row">
                 <div class="col-sm-12">
-					<form name="new-user" method="post" action="#"><h3 id="subtitleVerde">Novo Utilizador:</h3>
+					<form name="new-user" method="post" action="message.php" onsubmit="return validateForm_register();"><h3 id="subtitleVerde">Novo Utilizador:</h3>
                         <div class="form-group">Nome:
-                            <input style="width: 50%;" type="text" name="fname" class="form-control" placeholder="Nome" required>
+                            <input style="width: 50%;" type="text" id="fname" class="form-control" placeholder="Nome" required>
                         </div>
                         <div class="form-group">Apelido:
-                            <input style="width: 50%;" type="text" name="lname" class="form-control" placeholder="Apelido" required>
+                            <input style="width: 50%;" type="text" id="lname" class="form-control" placeholder="Apelido" required>
                         </div>
                         <div class="form-group">Username:
-                            <input style="width: 50%;" type="text" name="username" class="form-control" placeholder="username" required>
+                            <input style="width: 50%;" type="text" id="username" class="form-control" placeholder="username" required>
                         </div>
 						<div class="form-group">Password:
-                            <input style="width: 50%;" type="password" name="password" class="form-control" placeholder="password" required>
+                            <input style="width: 50%;" type="password" id="password" class="form-control" placeholder="password" required>
                         </div>
                         <div class="form-group">E-mail:
-                            <input style="width: 50%;" type="email" name="email" class="form-control" placeholder="e-mail" required>
+                            <input style="width: 50%;" type="email" id="email" class="form-control" placeholder="e-mail" required>
                         </div>
 						<div class="form-group">Telemóvel:
-                            <input style="width: 50%;" type="text" name="phone" class="form-control" placeholder="telemóvel" required>
+                            <input style="width: 50%;" type="tel" id="phone" class="form-control" placeholder="telemóvel" required>
                         </div>
 						<div class="form-group">Páginas de trabalho(separados por vírgulas, sem espaços):
-                            <input type="text" name="worklinks" class="form-control" placeholder="worklinks" required>
+                            <input type="text" id="worklinks" class="form-control" placeholder="worklinks" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Inserir</button>
 					</form>

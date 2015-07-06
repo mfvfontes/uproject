@@ -25,6 +25,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	<link href="css/style2.css" rel="stylesheet">
+	<script src="js/validate.js"></script>
 </head><!--/head-->
 
 <body id="home" class="homepage">
@@ -78,22 +79,22 @@
                               <abbr title="Phone">Telefone:</abbr> 913590712 | 914696632
                             </address>
 
-                            <form id="main-contact-form" name="contact-form" method="post" action="#">
+                            <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php" onsubmit="return validateForm_contact();">
 							<div class="form-group wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Nome" required>
+                                    <input type="text" id="name" class="form-control" placeholder="Nome" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="email" id="email" class="form-control" placeholder="Email" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="institution" class="form-control" placeholder="Instituição" required>
+                                    <input type="text" id="institution" class="form-control" placeholder="Instituição" required>
                                 </div>
 								<div class="form-group">
-                                    <input type="text" name="subject" class="form-control" placeholder="Assunto" required>
+                                    <input type="text" id="subject" class="form-control" placeholder="Assunto" required>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" rows="5" placeholder="Mensagem" required></textarea>
+                                    <textarea id="message" class="form-control" rows="5" placeholder="Mensagem" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
 								</div>
@@ -124,7 +125,7 @@
 						<div class="collapse navbar-collapse navbar-left">
 							<div id = "row">
 								<div class="col-sm-1" style="padding-top: 15px">
-								<a href="https://www.facebook.com/"><img height="25" id=social-icon" src="images/facebook.png"></a>
+								<a href="https://www.facebook.com/"><img height="25" id=social-icon src="images/facebook.png"></a>
 								<a href="https://plus.google.com/"><img height="25" id=social-icon" src="images/googleplus.png"></a>
 								<a href="https://www.twitter.com/"><img height="25" id=social-icon" src="images/twitter.png"></a>
 								</div>
