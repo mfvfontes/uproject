@@ -1,0 +1,36 @@
+<pages>
+<link>
+<title>Página inicial</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/index.php</url>
+</link>
+<title>Notícias</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/index.php</url>
+</link>
+<title>Portefólio</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/index.php</url>
+</link>
+<title>Projetos a decorrer</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/index.php</url>
+</link>
+<title>Competições</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/competitions.php</url>
+</link>
+<title>Contactos</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/contacts.php</url>
+</link>
+<title>Junta-ta a nós</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/join_us.php</url>
+</link>
+<title>Organização</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/about_us.php</url>
+</link>
+<title>Junta-te a nós</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/join_us.php</url>
+</link>
+<title>Parcerias</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/parcerias.php</url>
+</link>
+<title>FAQ's</title>
+<url>http://gnomo.fe.up.pt/~ei12183/uproject-smarty/pages/faq.php</url>
+</link>
+</pages>
